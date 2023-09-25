@@ -2,11 +2,11 @@
 This project demonstrates a simple fintech solution built to save money for a saving goal and keep track of hi/her all personal transactions of the customer.
 
 
-To Run the application Pleasse follow these steps 
+To Run the application Please follow these steps 
 
 1. yarn  / npm i
-2. yarn run pod pod-setup if you have not installed bundle you can do the step below
-3. cd ios && pod install && cd ... (Optional step if you dont have bundle)
+2. yarn run pod-setup if you do not have a bundle installed you can do the step below
+3. cd ios && pod install && cd .. (Optional step if you don't have bundle)
 4. yarn run ios 
 5. yarn run android 
 
