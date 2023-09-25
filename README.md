@@ -1,5 +1,5 @@
 # savePlus
-This project demonstrates a simple fintech solution built to save money for a saving goal and keep track of customer's all personal transactions of the customer.
+This project demonstrates a simple fintech solution built to save money for a saving goal and keep track of customer's all personal transactions.
 
 
 To Run the application Please follow these steps 
