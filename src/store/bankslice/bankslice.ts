@@ -13,11 +13,13 @@ const slice = createSlice({
   initialState,
   reducers: {
     depositMoney: (state, action: PayloadAction<Transaction>) => {
+      bankRepository.setPreviousTransactions(state.transactions);
       bankRepository.depositMoney(action.payload);
       state.balance = bankRepository.getBalance();
       state.transactions = bankRepository.getTransactions();
     },
     withdrawMoney: (state, action: PayloadAction<Transaction>) => {
+      bankRepository.setPreviousTransactions(state.transactions);
       bankRepository.withdrawMoney(action.payload);
       state.balance = bankRepository.getBalance();
       state.transactions = bankRepository.getTransactions();

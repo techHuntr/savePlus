@@ -3,9 +3,14 @@ import { View, Modal, TextInput, TouchableOpacity, Text, StyleSheet } from 'reac
 
 const DepositPopup = ({ visible, onConfirm, onCancel, actionType, amount, remarks, setAmount, setRemarks, setName, name }) => {
     const handleConfirm = () => {
-        // Validate the input (e.g., check if amount is a valid number)
-        if (!isNaN(parseFloat(amount)) && remarks.trim() !== '') {
-            onConfirm(parseFloat(amount), remarks, actionType, name);
+        if(parseFloat(amount) == 0 ) return;
+        try {
+            // Validate the input (e.g., check if amount is a valid number)
+            if (!isNaN(parseFloat(amount)) && remarks.trim() !== '') {
+                onConfirm(parseFloat(amount), remarks, actionType, name);
+            }
+        } catch (e) {
+            console.log(e)
         }
     };
 

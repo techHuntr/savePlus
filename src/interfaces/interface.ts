@@ -12,6 +12,7 @@ export interface BankState {
 export interface BankRepository {
   depositMoney: (transaction: Transaction) => void;
   withdrawMoney: (transaction: Transaction) => void;
+  setPreviousTransactions :  (transactions: Transaction[]) => void;
   getBalance: () => number;
   getTransactions: () => Transaction[];
 }

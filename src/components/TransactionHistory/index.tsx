@@ -11,7 +11,7 @@ const TransactionHistory = () => {
   // Define a renderItem function for FlatList
   const renderItem = ({ item }) => (
     <TransactionItem>
-      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center'}}>
         <Image
           source={item.amount > 0 ? require('../../theme/assets/images/deposit_money.png') : require('../../theme/assets/images/withdrwal_money.png')}
           style={{ width: 20, height: 20, marginRight: 8 }}
@@ -32,7 +32,7 @@ const TransactionHistory = () => {
         data={transactions}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
-        style={{ height: 200 }} 
+        style={{height : 250}}
       />
     </TransactionHistoryContainer>
   );
